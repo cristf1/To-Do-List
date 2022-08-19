@@ -19,16 +19,16 @@ function newItem(){
 
  //2. Crossing out an item from the list of items:
 
-$('#list').on('dblclick', function(){
-    let listItem =
-    listItem.addClass('strike');
-  });
+list.on('dblclick', function(){
+  $(this).toggleClass('strike');
+});
 
  //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
   $('.crossOutButton').on('click',deleteListItem)
 
   function deleteListItem(){
-    $('#list').addClass('delete');
+    console.log('delete');
+  $(list).addClass('delete');
   };
  // 4. Reordering the items:
    $('#list').sortable();
